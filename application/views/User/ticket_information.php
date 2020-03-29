@@ -43,7 +43,7 @@
                     <input type="text" class="form-control form-control-sm" name="ticket_time" id="ticket_time" value="<?php if(isset($ticket_time)){ echo $ticket_time; } ?>" placeholder="Enter Ticket Time" required>
                   </div>
 
-                  <div class="form-group col-md-7 select_sm">
+                  <div class="form-group col-md-4 select_sm">
                     <label>Select Party</label>
                     <select class="form-control select2" name="employee_id" id="employee_id" data-placeholder="Select Party" required>
                       <option value="">Select Party</option>
@@ -53,20 +53,6 @@
                     </select>
                   </div>
 
-                  <div class="form-group col-md-2  offset-md-2">
-                    <button id="btn_save" type="submit" class="btn btn-success mt-3">Add Party</button>
-                  </div>
-
-
-                  <div class="form-group col-md-4 select_sm">
-                    <label>Select Reporting Type</label>
-                    <select class="form-control select2" name="reporting_type" id="reporting_type" data-placeholder="Select Reporting Type" required>
-                      <option value="">Select Reporting Type</option>
-                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
-                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
-                      <?php } } ?> -->
-                    </select>
-                  </div>
 
                   <div class="form-group col-md-4 select_sm">
                     <label>Select Contract No.</label>
@@ -78,22 +64,31 @@
                     </select>
                   </div>
 
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select Reporting Type</label>
+                    <select class="form-control select2" name="reporting_type" id="reporting_type" data-placeholder="Select Reporting Type" required>
+                      <option value="">Select Reporting Type</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label>Enter Contract Start Date</label>
+                    <input type="text" class="form-control form-control-sm" name="con_sdate" id="con_sdate" value="<?php if(isset($con_sdate)){ echo $con_sdate; } ?>" placeholder="Enter Contract Start Date" readonly>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label>Enter Contract End Date</label>
+                    <input type="text" class="form-control form-control-sm" name="con_edate" id="con_edate" value="<?php if(isset($con_edate)){ echo $con_edate; } ?>" placeholder="Enter Contract End Date" readonly>
+                  </div>
+
 
 
                   <div class="form-group col-md-4">
-                    <label>Contract Type</label>
-                    <input type="text" class="form-control form-control-sm" name="contract_type" id="contract_type" value="<?php if(isset($contract_type)){ echo $contract_type; } ?>" placeholder="Contract Type" readonly>
-                  </div>
-
-
-                  <div class="form-group col-md-6">
-                    <label>Enter Contract Start Date</label>
-                    <input type="text" class="form-control form-control-sm" name="con_sdate" id="con_sdate" value="<?php if(isset($con_sdate)){ echo $con_sdate; } ?>" placeholder="Enter Contract Start Date" required>
-                  </div>
-
-                  <div class="form-group col-md-6">
-                    <label>Enter Contract End Date</label>
-                    <input type="text" class="form-control form-control-sm" name="con_edate" id="con_edate" value="<?php if(isset($con_edate)){ echo $con_edate; } ?>" placeholder="Enter Contract End Date" required>
+                    <label>Balance Service Calls</label>
+                    <input type="text" class="form-control form-control-sm" name="contract_type" id="contract_type" value="<?php if(isset($contract_type)){ echo $contract_type; } ?>" placeholder="Balance Service Calls" readonly>
                   </div>
 
                   <div class="form-group col-md-6">
@@ -106,51 +101,51 @@
                     <input type="text" class="form-control form-control-sm" name="reporting_mobile" id="reporting_mobile" value="<?php if(isset($reporting_mobile)){ echo $reporting_mobile; } ?>" placeholder="Reporting Person Contact No." required>
                   </div>
 
-
-
-
-                  <div class="form-group col-md-6 select_sm">
-                    <label>Select Issue</label>
-                    <select class="form-control select2" name="priority" id="priority" data-placeholder="Select Issue" required>
-                      <option value="">Select Issue</option>
-                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
-                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
-                      <?php } } ?> -->
-                    </select>
-                  </div>
-
-                  <div class="form-group col-md-2  offset-md-3">
-                    <button id="btn_save" type="submit" class="btn btn-success mt-3">Add More</button>
-                  </div>
-
                   <div class="form-group col-md-12">
                     <label>Enter details</label>
-                    <textarea name="ticket_details" rows="3" class="form-control" cols="90"></textarea>
+                    <textarea name="ticket_details" rows="5" class="form-control" cols="90"></textarea>
                   </div>
 
 
-                  <div class="form-group col-md-6">                  
-                    <input class="form-control" type="file" name="ticket_image" value="">
-                    </div>
-
-                    <div class="form-group col-md-2  offset-md-3">
-                      <button id="btn_save" type="submit" class="btn btn-success mt-3">Add More</button>
-                    </div>
-
-
                   <div class="form-group col-md-6 select_sm">
-                    <label>Select Ticket Status</label>
-                    <select class="form-control select2" name="ticket_status" id="ticket_status" data-placeholder="Select Ticket Status" required>
-                      <option value="">Select Ticket Status</option>
+                    <label>Select Priority</label>
+                    <select class="form-control select2" name="priority" id="priority" data-placeholder="Select Priority" required>
+                      <option value="">Select Priority</option>
                       <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
                       <?php } } ?> -->
                     </select>
                   </div>
 
+                  <div class="form-group col-md-6 select_sm">
+                    <label>Select Status</label>
+                    <select class="form-control select2" name="ticket_status" id="ticket_status" data-placeholder="Select Status" required>
+                      <option value="">Select Status</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
 
+                  <div class="form-group col-md-6 select_sm">
+                    <label>Assign Group</label>
+                    <select class="form-control select2" name="group" id="group" data-placeholder="Assign Group" required>
+                      <option value="">Assign Group</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
 
-
+                  <div class="form-group col-md-6 select_sm">
+                    <label>Assign Employee Name</label>
+                    <select class="form-control select2" name="employee_id" id="employee_id" data-placeholder="Assign Employee Name" required>
+                      <option value="">Assign Employee Name</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
                 </div>
                 <div class="card-footer row">
 
@@ -160,7 +155,7 @@
                     <?php } else{ ?>
                       <button id="btn_save" type="submit" class="btn btn-success px-4">Save</button>
                     <?php } ?>
-                    <a href="<?php echo base_url() ?>User/task_information_list" class="btn btn-default ml-4">Cancel</a>
+                    <a href="<?php echo base_url() ?>User/ticket_information_list" class="btn btn-default ml-4">Cancel</a>
                   </div>
                 </div>
               </form>

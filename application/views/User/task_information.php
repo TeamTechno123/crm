@@ -28,10 +28,21 @@
               <!-- form start -->
               <form class="m-0 input_form" id="form_action" role="form" action="" method="post">
                 <div class="card-body row">
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-12">
                     <label>Enter Task Name</label>
                     <input type="text" class="form-control form-control-sm" name="task_name" id="task_name" value="<?php if(isset($task_name)){ echo $task_name; } ?>" placeholder="Enter Task Name" required>
                   </div>
+
+                  <div class="form-group col-md-6 select_sm">
+                    <label>Related Contract</label>
+                    <select class="form-control select2" name="contract_id" id="contract_id" data-placeholder="Related Contract" required>
+                      <option value="">Related Contract</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
                   <div class="form-group col-md-6 select_sm">
                     <label>Assign To</label>
                     <select class="form-control select2" name="employee_id" id="employee_id" data-placeholder="Assign To" required>
@@ -72,25 +83,17 @@
                     </select>
                   </div>
 
-                  <div class="form-group col-md-6 select_sm">
+                  <!-- <div class="form-group col-md-6 select_sm">
                     <label>Select Party Name </label>
                     <select class="form-control select2" name="stage" id="stage" data-placeholder="Select Party Name " required>
                       <option value="">Select Party Name </option>
-                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
-                      <?php } } ?> -->
+                      <?php } } ?>
                     </select>
-                  </div>
+                  </div> -->
 
-                  <div class="form-group col-md-6 select_sm">
-                    <label>Select Project / Contract No.</label>
-                    <select class="form-control select2" name="contract_no" id="contract_no" data-placeholder="Select Project / Contract No." required>
-                      <option value="">Select Project / Contract No.</option>
-                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
-                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
-                      <?php } } ?> -->
-                    </select>
-                  </div>
+
 
 
                   <div class="form-group col-md-6 select_sm">
@@ -104,15 +107,25 @@
                   </div>
 
                   <div class="form-group col-md-6">
-                    <label>Enter Task Amount</label>
-                    <input type="text" class="form-control form-control-sm" name="task_name" id="task_name" value="<?php if(isset($task_name)){ echo $task_name; } ?>" placeholder="Enter Task Amount" required>
+                    <label>Estimated Budget</label>
+                    <input type="text" class="form-control form-control-sm" name="task_name" id="task_name" value="<?php if(isset($task_name)){ echo $task_name; } ?>" placeholder="Estimated Budget" required>
                   </div>
 
-
-                  <div class="form-group col-md-12">
-                    <label>Enter Description</label>
-                    <textarea class="form-control" name="solution" rows="3" cols="100" placeholder="Enter Description"> </textarea>
+                  <div class="form-group col-md-6 select_sm">
+                    <label>Select Status Of Task</label>
+                    <select class="form-control select2" name="task_type" id="task_type" data-placeholder="Select Status Of Task" required>
+                      <option value="">Select Status Of Task</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
                   </div>
+
+                  <div class="form-group col-md-6">
+                    <label>Task Completion Date & Time</label>
+                    <input type="text" class="form-control form-control-sm" name="task_name" id="task_name" value="<?php if(isset($task_name)){ echo $task_name; } ?>" placeholder="Task Completion Date & Time" required>
+                  </div>
+
 
                   <div class="form-group col-md-6">
                         <div class="custom-control custom-checkbox">
@@ -122,7 +135,7 @@
                       </div>
                 </div>
                 <div class="card-footer row">
-                  
+
                   <div class="col-md-12 text-center">
                     <?php if(isset($update)){ ?>
                       <button id="btn_update" type="submit" class="btn btn-primary">Update </button>

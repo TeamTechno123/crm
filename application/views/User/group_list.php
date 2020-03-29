@@ -9,10 +9,10 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6 mt-1">
-            <h4>Item Category</h4>
+            <h4>Group Information List</h4>
           </div>
           <div class="col-sm-6 mt-1 text-right">
-              <a href="item_category" class="btn btn-sm btn-primary">Add Item Category</a>
+              <a href="<?php echo base_url(); ?>User/group" class="btn btn-sm btn-primary">Add Group</a>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -31,23 +31,23 @@
                 <thead>
                 <tr>
                   <th class="wt_50">#</th>
-                  <th>Item Category Name</th>
+                  <th>Group Name</th>
                   <th class="wt_100">Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                  <?php $i = 0;
-                  foreach ($item_category_list as $list) {
+                  <!-- <?php $i = 0;
+                  foreach ($unit_list as $list) {
                     $i++; ?>
                   <tr>
                     <td><?php echo $i; ?></td>
-                    <td><?php echo $list->item_category_name ?></td>
+                    <td><?php echo $list->unit_name ?></td>
                     <td>
-                      <a href="<?php echo base_url(); ?>User/edit_item_category/<?php echo $list->item_category_id; ?>"> <i class="fa fa-edit"></i> </a>
-                      <a href="<?php echo base_url(); ?>User/delete_item_category/<?php echo $list->item_category_id; ?>" onclick="return confirm('Delete this Information');" class="ml-4"> <i class="fa fa-trash text-danger"></i> </a>
+                      <a href="<?php echo base_url(); ?>User/edit_unit/<?php echo $list->unit_id; ?>"> <i class="fa fa-edit"></i> </a>
+                      <a href="<?php echo base_url(); ?>User/delete_unit/<?php echo $list->unit_id; ?>" onclick="return confirm('Delete this Information');" class="ml-4"> <i class="fa fa-trash text-danger"></i> </a>
                     </td>
                   <?php } ?>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>

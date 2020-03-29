@@ -9,7 +9,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12 text-center mt-2">
-            <h1>Tags</h1>
+            <h1>Group Information</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -22,15 +22,15 @@
             <!-- general form elements -->
             <div class="card card-default">
               <div class="card-header">
-                <h3 class="card-title">Add Tag</h3>
+                <h3 class="card-title">Group</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form class="m-0 input_form" id="form_action" role="form" action="" method="post">
                 <div class="card-body row">
                   <div class="form-group col-md-12">
-                    <label>Tag Name</label>
-                    <input type="text" class="form-control form-control-sm" name="tags_name" id="tags_name" value="<?php if(isset($tags_name)){ echo $tags_name; } ?>" placeholder="" required>
+                    <label>Group Name</label>
+                    <input type="text" class="form-control form-control-sm" name="group_name" id="group_name" value="<?php if(isset($group_name)){ echo $group_name; } ?>" placeholder="" required>
                   </div>
                 </div>
                 <div class="card-footer row">
@@ -42,7 +42,7 @@
                     <?php } else{ ?>
                       <button id="btn_save" type="submit" class="btn btn-success px-4">Save</button>
                     <?php } ?>
-                    <a href="<?php echo base_url() ?>User/supplier_list" class="btn btn-default ml-4">Cancel</a>
+                    <a href="<?php echo base_url() ?>User/group_list" class="btn btn-default ml-4">Cancel</a>
                   </div>
                 </div>
               </form>
@@ -58,20 +58,20 @@
 
 <script type="text/javascript">
 // Check Mobile Duplication..
-  var tags_name1 = $('#tags_name').val();
-  $('#tags_name').on('change',function(){
-    var tags_name = $(this).val();
+  var group_name1 = $('#group_name').val();
+  $('#group_name').on('change',function(){
+    var group_name = $(this).val();
     $.ajax({
       url:'<?php echo base_url(); ?>User/check_duplication',
       type: 'POST',
-      data: {"column_name":"tags_name",
-             "column_val":tags_name,
-             "table_name":"tags"},
+      data: {"column_name":"group_name",
+             "column_val":group_name,
+             "table_name":"group"},
       context: this,
       success: function(result){
         if(result > 0){
-          $('#tags_name').val(tags_name1);
-          toastr.error(tags_name+' Exist.');
+          $('#group_name').val(group_name1);
+          toastr.error(group_name+' Exist.');
         }
       }
     });

@@ -12,7 +12,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12 text-center mt-2">
-            <h1>Company Information</h1>
+            <h1>Branch Information</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -26,7 +26,7 @@
             <!-- general form elements -->
             <div class="card card-default">
               <div class="card-header">
-                <h3 class="card-title">Company Information</h3>
+                <h3 class="card-title">Branch Information</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -39,13 +39,24 @@
               <form class="input_form" action="" method="post" enctype="multipart/form-data">
 
                 <div class="card-body row">
+
+                  <div class="form-group col-md-12 select_sm">
+                    <label>Select Parent Company</label>
+                    <select class="form-control select2" name="country_id" id="country_id" data-placeholder="Select Parent Company" required>
+                      <option value="">Select Parent Company</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
                   <div class="form-group col-md-12">
-                    <label>Company Name</label>
-                    <input type="text" class="form-control form-control-sm" name="company_name" id="company_name" value="<?php if(isset($company_name)){ echo $company_name; } ?>" placeholder="Enter Company Name" required>
+                    <label>Enter Branch Name</label>
+                    <input type="text" class="form-control form-control-sm" name="company_name" id="company_name" value="<?php if(isset($company_name)){ echo $company_name; } ?>" placeholder="Enter Branch Name" required>
                   </div>
                   <div class="form-group col-md-12">
                     <label>Address</label>
-                    <textarea class="form-control form-control-sm" rows="3" name="company_address" id="company_address" placeholder="Enter Company Address" required><?php if(isset($company_address)){ echo $company_address; } ?></textarea>
+                    <textarea class="form-control form-control-sm" rows="3" name="company_address" id="company_address" placeholder="Enter Branch Address" required><?php if(isset($company_address)){ echo $company_address; } ?></textarea>
                   </div>
                   <div class="form-group col-md-4 select_sm">
                     <label>Select Country</label>
@@ -103,7 +114,7 @@
                     <input type="text" class="form-control form-control-sm" name="company_lic2" id="company_lic2" value="<?php if(isset($company_lic2)){ echo $company_lic2; } ?>" placeholder="Enter IEC Code No.">
                   </div>
                   <div class="form-group col-md-6">
-                    <label>Company Logo</label>
+                    <label>Branch Logo</label>
                     <input type="file" name="company_logo" value="">
                     </div>
                     <div class="col-md-6">
@@ -121,7 +132,7 @@
 
                   <?php if(isset($update)){ }else{ ?>
                     <div class="form-group col-md-6">
-                      <label>Company Logo</label>
+                      <label>Branch Logo</label>
                       <div class="input-group">
                         <div class="custom-file">
                           <input type="file" name="company_logo" class="custom-file-input" id="exampleInputFile">
@@ -145,11 +156,11 @@
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <?php if(isset($update)){ ?>
-                    <button type="submit" class="btn btn-primary">Update Company</button>
+                    <button type="submit" class="btn btn-primary">Update Branch</button>
                   <?php }else{ ?>
-                    <button type="submit" class="btn btn-success">Create Company</button>
+                    <button type="submit" class="btn btn-success">Create Branch</button>
                   <?php } ?>
-                  <a href="<?php echo base_url(); ?>/User/company_information_list" class="btn btn-default ml-4">Cancel</a>
+                  <a href="<?php echo base_url(); ?>/User/branch_information_list" class="btn btn-default ml-4">Cancel</a>
                 </div>
               </form>
             </div>

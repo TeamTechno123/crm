@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<!-- <style>
-  td{ padding:7px 10px !important; }
-</style> -->
+<style>
+  td{ padding:2px 10px !important; }
+</style>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
   <!-- Content Wrapper. Contains page content -->
@@ -12,10 +12,10 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6 mt-1">
-            <h4>Item Account Groups</h4>
+            <h4>Service Contract Information</h4>
           </div>
           <div class="col-sm-6 mt-1 text-right">
-              <a href="item_group" class="btn btn-sm btn-primary">Add Account Group</a>
+              <a href="<?php echo base_url(); ?>User/service_contract" class="btn btn-sm btn-primary">Add Contract</a>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -34,23 +34,30 @@
                 <thead>
                 <tr>
                   <th class="wt_50">#</th>
-                  <th>Account Group Name</th>
+                  <th>Type Of Contract</th>
+                  <th>Contract Name</th>
+                  <th>Date</th>
+                  <th>Lead</th>
+                  <th>Status</th>
                   <th class="wt_100">Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                  <?php $i = 0;
-                  foreach ($item_group_list as $list) {
-                    $i++; ?>
+                  <!-- <?php $i = 0;
+                  foreach ($item_account_list as $list) {
+                    $i++;
+                    $item_group = $this->User_Model->get_info_arr_fields('item_group_name','item_group_id', $list->item_group_id, 'item_group');
+                  ?>
                   <tr>
                     <td><?php echo $i; ?></td>
-                    <td><?php echo $list->item_group_name ?></td>
+                    <td><?php echo $list->item_account_name; ?></td>
+                    <td><?php echo $item_group[0]['item_group_name']; ?></td>
                     <td>
-                      <a href="<?php echo base_url(); ?>User/edit_item_group/<?php echo $list->item_group_id; ?>"> <i class="fa fa-edit"></i> </a>
-                      <a href="<?php echo base_url(); ?>User/delete_item_group/<?php echo $list->item_group_id; ?>" onclick="return confirm('Delete Information');" class="ml-4"> <i class="fa fa-trash text-danger"></i> </a>
+                      <a href="<?php echo base_url(); ?>User/edit_item_account/<?php echo $list->item_account_id; ?>"> <i class="fa fa-edit"></i> </a>
+                      <a href="<?php echo base_url(); ?>User/delete_item_account/<?php echo $list->item_account_id; ?>" onclick="return confirm('Delete this User');" class="ml-4"> <i class="fa fa-trash text-danger"></i> </a>
                     </td>
                   <?php } ?>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>

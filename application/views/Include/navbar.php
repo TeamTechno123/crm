@@ -73,24 +73,11 @@
                 </p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/user_list" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>User</p>
-              </a>
-            </li>
 
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/issue_information_list" class="nav-link">
+              <a href="<?php echo base_url(); ?>User/branch_information_list" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Issue Information</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/task_information_list" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Task Information</p>
+                <p>Branch Information</p>
               </a>
             </li>
 
@@ -102,11 +89,65 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/ticket_information_list" class="nav-link">
+              <a href="<?php echo base_url(); ?>User/unit_list" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Ticket Information</p>
+                <p>Unit</p>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>User/party_information_list" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Party / Vendor Information</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>User/service_contract_list" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Service Contract Information</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>User/group_list" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Group Information</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>User/user_list" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>User Information</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>User/issue_information_list" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Issue Information</p>
+              </a>
+            </li>
+
+            <!-- <li class="nav-item">
+              <a href="<?php echo base_url(); ?>User/party_information_list" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Party</p>
+              </a>
+            </li> -->
+          </ul>
+        </li>
+
+         <li class="nav-item has-treeview">
+          <a href="#" class="nav-link head">
+            <i class="nav-icon fas fa-chart-pie"></i>
+            <p>
+              Transaction Information
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview" style="display: none;">
 
             <li class="nav-item">
               <a href="<?php echo base_url(); ?>User/lead_information_list" class="nav-link">
@@ -116,64 +157,36 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/contract_information_list" class="nav-link">
+              <a href="<?php echo base_url(); ?>User/project_contract_list" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Contract Information</p>
+                <p>Project Contract Information</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/project_information_list" class="nav-link">
+              <a href="<?php echo base_url(); ?>User/task_information_list" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Project Information</p>
+                <p>Task Information</p>
               </a>
             </li>
+
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/unit_list" class="nav-link">
+              <a href="<?php echo base_url(); ?>User/ticket_information_list" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Unit</p>
+                <p>Ticket Information</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>User/attendence_list" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Attendence</p>
               </a>
             </li>
           </ul>
         </li>
 
-        <li class="nav-item has-treeview">
-          <a href="#" class="nav-link head">
-            <i class="nav-icon fas fa-chart-pie"></i>
-            <p>
-              Manage
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview" style="display: none;">
-            <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/customer_list" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Customers</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/supplier_list" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Suppliers</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/item_list" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Items</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?php echo base_url(); ?>User/stock_list" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Stock</p>
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-treeview">
+      <!--  <li class="nav-item has-treeview">
           <a href="#" class="nav-link head">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
@@ -209,7 +222,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li>-->
 
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link head">
@@ -223,9 +236,38 @@
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Demo Link</p>
+                <p>Lead Report</p>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Project Register</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Task Register</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Ticket Register </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Attendence Register </p>
+              </a>
+            </li>
+
           </ul>
         </li>
       </nav>

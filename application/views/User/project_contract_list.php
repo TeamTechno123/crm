@@ -12,10 +12,10 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6 mt-1">
-            <h4>Contract Information</h4>
+            <h4>Project Contract Information</h4>
           </div>
           <div class="col-sm-6 mt-1 text-right">
-              <a href="<?php echo base_url(); ?>User/contract_information" class="btn btn-sm btn-primary">Add Contract</a>
+              <a href="<?php echo base_url(); ?>User/project_contract" class="btn btn-sm btn-primary">Add Contract</a>
           </div>
         </div>
       </div><!-- /.container-fluid -->

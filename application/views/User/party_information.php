@@ -9,7 +9,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12 text-center mt-2">
-            <h1>User Information</h1>
+            <h1>Party Information</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -23,7 +23,7 @@
             <!-- general form elements -->
             <div class="card card-default">
               <div class="card-header">
-                <h3 class="card-title">Add User</h3>
+                <h3 class="card-title">Add Party</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -31,9 +31,9 @@
                 <div class="card-body row">
 
                   <div class="form-group col-md-6 select_sm">
-                    <label>Select Group Name</label>
-                    <select class="form-control select2" name="group_name" id="group_name" data-placeholder="Select Group Name" required>
-                      <option value="">Select Group Name</option>
+                    <label>Select Party Type</label>
+                    <select class="form-control select2" name="group_name" id="group_name" data-placeholder="Select Party Type" required>
+                      <option value="">Select Party Type</option>
                       <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
                       <?php } } ?> -->
@@ -41,35 +41,58 @@
                   </div>
 
                   <div class="form-group col-md-6 select_sm">
-                    <label>Select Role Name</label>
-                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select Role Name" required>
-                      <option value="">Select Role Name</option>
+                    <label>Select Party Level</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select Party Level" required>
+                      <option value="">Select Party Level</option>
                       <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
                       <?php } } ?> -->
                     </select>
                   </div>
 
-                  <div class="form-group col-md-12" data-select2-id="48">
-                  <label>Multiple</label>
-                  <select class="select2 select2-hidden-accessible" multiple="" data-placeholder="Select a State" style="width: 100%;" data-select2-id="7" tabindex="-1" aria-hidden="true">
-                    <option data-select2-id="50">Alabama</option>
-                    <option data-select2-id="51">Alaska</option>
-                    <option data-select2-id="52">California</option>
-                    <option data-select2-id="53">Delaware</option>
-                    <option data-select2-id="54">Tennessee</option>
-                    <option data-select2-id="55">Texas</option>
-                    <option data-select2-id="56">Washington</option>
-                  </select>
-                </div>
                   <div class="form-group col-md-12">
-                    <label>Enter Name Of Employee</label>
-                    <input type="text" class="form-control required title-case text" name="user_name" id="user_name" value="<?php if(isset($user_name)){ echo $user_name; } ?>" placeholder="Enter Name of Employee" required>
+                    <label>Enter Name of Party</label>
+                    <input type="text" class="form-control required title-case text" name="user_name" id="user_name" value="<?php if(isset($user_name)){ echo $user_name; } ?>" placeholder="Enter Name of Party" required>
                   </div>
+
                   <div class="form-group col-md-12">
                     <label>Enter Address</label>
-                    <textarea class="form-control" name="name" rows="3" cols="95"></textarea>
+                    <textarea class="form-control" name="solution" rows="3" cols="100" placeholder="Enter Address"> </textarea>
                   </div>
+
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select Country</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select Country" required>
+                      <option value="">Select Country</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
+
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select State</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select State" required>
+                      <option value="">Select State</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
+
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select City</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select City" required>
+                      <option value="">Select City</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
+
 
                   <div class="form-group col-md-6">
                     <label>Mobile No. 1</label>
@@ -85,8 +108,19 @@
                     <input type="email" class="form-control form-control-sm" name="company_email" id="company_email" value="<?php if(isset($company_email)){ echo $company_email; } ?>" placeholder="Email" required>
                   </div>
                   <div class="form-group col-md-6">
-                    <label>Website</label>
-                    <input type="text" class="form-control form-control-sm" name="company_website" id="company_website" value="<?php if(isset($company_website)){ echo $company_website; } ?>" placeholder="Website">
+                    <label>Contact Person Name</label>
+                    <input type="text" class="form-control form-control-sm" name="company_website" id="company_website" value="<?php if(isset($company_website)){ echo $company_website; } ?>" placeholder="Contact Person Name">
+                  </div>
+
+
+
+                  <div class="form-group col-md-6">
+                    <label>PAN No.</label>
+                    <input type="text" class="form-control form-control-sm" name="pan_no" id="pan_no" value="<?php if(isset($pan_no)){ echo $pan_no; } ?>" placeholder="PAN No." required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>GST No.</label>
+                    <input type="text" class="form-control form-control-sm" name="adhar_no" id="adhar_no" value="<?php if(isset($adhar_no)){ echo $adhar_no; } ?>" placeholder="GST No.">
                   </div>
 
                   <div class="form-group col-md-6">
@@ -96,15 +130,6 @@
                   <div class="form-group col-md-6">
                     <label>Anniversary On</label>
                     <input type="text" class="form-control form-control-sm" name="anniversary_date" id="anniversary_date" value="<?php if(isset($anniversary_date)){ echo $anniversary_date; } ?>" placeholder="Anniversary On">
-                  </div>
-
-                  <div class="form-group col-md-6">
-                    <label>PAN No.</label>
-                    <input type="text" class="form-control form-control-sm" name="pan_no" id="pan_no" value="<?php if(isset($pan_no)){ echo $pan_no; } ?>" placeholder="PAN No." required>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label>Adhar No.</label>
-                    <input type="text" class="form-control form-control-sm" name="adhar_no" id="adhar_no" value="<?php if(isset($adhar_no)){ echo $adhar_no; } ?>" placeholder="Adhar No.">
                   </div>
 
                   <div class="form-group col-md-4">
@@ -121,32 +146,26 @@
                     <input type="text" class="form-control form-control-sm" name="ifsc_code" id="ifsc_code" value="<?php if(isset($ifsc_code)){ echo $ifsc_code; } ?>" placeholder="IFSC Code">
                   </div>
 
-                  <div class="form-group col-md-6">
-                    <label>Employment Start Date</label>
-                    <input type="text" class="form-control form-control-sm" name="emp_sdate" id="emp_sdate" value="<?php if(isset($emp_sdate)){ echo $emp_sdate; } ?>" placeholder="Employment Start Date" required>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label>Employment End Date</label>
-                    <input type="text" class="form-control form-control-sm" name="emp_edate" id="emp_edate" value="<?php if(isset($emp_edate)){ echo $emp_edate; } ?>" placeholder="Employment End Date">
+                  <div class="form-group col-md-4">
+                    <label>Credit Limit On </label>
+                    <input type="text" class="form-control form-control-sm" name="bank_name" id="bank_name" value="<?php if(isset($bank_name)){ echo $bank_name; } ?>" placeholder="Credit Limit On ">
                   </div>
 
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-4">
+                    <label>Bill Limit On </label>
+                    <input type="text" class="form-control form-control-sm" name="account_no" id="account_no" value="<?php if(isset($account_no)){ echo $account_no; } ?>" placeholder="Bill Limit On ">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>pyment Terms </label>
+                    <input type="text" class="form-control form-control-sm" name="ifsc_code" id="ifsc_code" value="<?php if(isset($ifsc_code)){ echo $ifsc_code; } ?>" placeholder="pyment Terms ">
+                  </div>
 
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" name="company_logo" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Browse file</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group col-md-6">
-                    No file selected.
-                  </div>
+
 
                   <div class="form-group col-md-6">
                         <div class="custom-control custom-checkbox">
                           <input class="custom-control-input" type="checkbox" name="user_status" id="user_status" value="1">
-                          <label for="composition_scheme" class="custom-control-label">Disable This User</label>
+                          <label for="composition_scheme" class="custom-control-label">Disable This Party</label>
                         </div>
                       </div>
                 </div>

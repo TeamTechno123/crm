@@ -1276,27 +1276,151 @@ public function lead_information(){
 
 
 // Issue List...
-public function contract_information_list(){
+public function service_contract_list(){
   $crm_user_id = $this->session->userdata('crm_user_id');
   $crm_company_id = $this->session->userdata('crm_company_id');
   $crm_roll_id = $this->session->userdata('crm_roll_id');
   if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
-  $data['contract_information_list'] = $this->User_Model->user_list($crm_company_id);
+  $data['service_contract_list'] = $this->User_Model->user_list($crm_company_id);
   $this->load->view('Include/head',$data);
   $this->load->view('Include/navbar',$data);
-  $this->load->view('User/contract_information_list',$data);
+  $this->load->view('User/service_contract_list',$data);
   $this->load->view('Include/footer',$data);
 }
 
 //Add Stock
-public function contract_information(){
+public function service_contract(){
   $crm_user_id = $this->session->userdata('crm_user_id');
   $crm_company_id = $this->session->userdata('crm_company_id');
   $crm_roll_id = $this->session->userdata('crm_roll_id');
   if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
   $this->load->view('Include/head');
   $this->load->view('Include/navbar');
-  $this->load->view('User/contract_information');
+  $this->load->view('User/service_contract');
+  $this->load->view('Include/footer');
+}
+
+public function project_contract_list(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $data['project_contract_list'] = $this->User_Model->user_list($crm_company_id);
+  $this->load->view('Include/head',$data);
+  $this->load->view('Include/navbar',$data);
+  $this->load->view('User/project_contract_list',$data);
+  $this->load->view('Include/footer',$data);
+}
+
+//Add Stock
+public function project_contract(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $this->load->view('Include/head');
+  $this->load->view('Include/navbar');
+  $this->load->view('User/project_contract');
+  $this->load->view('Include/footer');
+}
+
+
+public function party_information_list(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $data['party_information_list'] = $this->User_Model->user_list($crm_company_id);
+  $this->load->view('Include/head',$data);
+  $this->load->view('Include/navbar',$data);
+  $this->load->view('User/party_information_list',$data);
+  $this->load->view('Include/footer',$data);
+}
+
+//Add Stock
+public function party_information(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $this->load->view('Include/head');
+  $this->load->view('Include/navbar');
+  $this->load->view('User/party_information');
+  $this->load->view('Include/footer');
+}
+
+
+public function branch_information_list(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $data['branch_information_list'] = $this->User_Model->user_list($crm_company_id);
+  $this->load->view('Include/head',$data);
+  $this->load->view('Include/navbar',$data);
+  $this->load->view('User/branch_information_list',$data);
+  $this->load->view('Include/footer',$data);
+}
+
+//Add Stock
+public function branch_information(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $this->load->view('Include/head');
+  $this->load->view('Include/navbar');
+  $this->load->view('User/branch_information');
+  $this->load->view('Include/footer');
+}
+
+
+public function attendence_list(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $data['attendence_list'] = $this->User_Model->user_list($crm_company_id);
+  $this->load->view('Include/head',$data);
+  $this->load->view('Include/navbar',$data);
+  $this->load->view('User/attendence_list',$data);
+  $this->load->view('Include/footer',$data);
+}
+
+//Add Stock
+public function attendence(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $this->load->view('Include/head');
+  $this->load->view('Include/navbar');
+  $this->load->view('User/attendence');
+  $this->load->view('Include/footer');
+}
+
+
+public function group_list(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $data['group_list'] = $this->User_Model->user_list($crm_company_id);
+  $this->load->view('Include/head',$data);
+  $this->load->view('Include/navbar',$data);
+  $this->load->view('User/group_list',$data);
+  $this->load->view('Include/footer',$data);
+}
+
+//Add Stock
+public function group(){
+  $crm_user_id = $this->session->userdata('crm_user_id');
+  $crm_company_id = $this->session->userdata('crm_company_id');
+  $crm_roll_id = $this->session->userdata('crm_roll_id');
+  if($crm_user_id == '' && $crm_company_id == ''){ header('location:'.base_url().'User'); }
+  $this->load->view('Include/head');
+  $this->load->view('Include/navbar');
+  $this->load->view('User/group');
   $this->load->view('Include/footer');
 }
 

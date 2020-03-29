@@ -28,10 +28,19 @@
               <!-- form start -->
               <form class="m-0 input_form" id="form_action" role="form" action="" method="post">
                 <div class="card-body row">
-                  <div class="form-group col-md-12 select_sm">
-                    <label>Select Type Of Service / Product</label>
-                    <select class="form-control select2" name="service_id" id="service_id" data-placeholder="Select Type Of Service / Product" required>
-                      <option value="">Select Type Of Service / Product</option>
+                  <div class="form-group col-md-6 select_sm">
+                    <label>Select Type</label>
+                    <select class="form-control select2" name="type_id" id="type_id" data-placeholder="Select Type" required>
+                      <option value="">Select Type</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6 select_sm">
+                    <label>Select Service / Product Name</label>
+                    <select class="form-control select2" name="service_id" id="service_id" data-placeholder="Select Service / Product Name" required>
+                      <option value="">Select Service / Product Name</option>
                       <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
                       <?php } } ?> -->
@@ -45,6 +54,11 @@
                   <div class="form-group col-md-12">
                     <label>Enter Solution Details</label>
                     <textarea class="form-control" name="solution" rows="3" cols="100" placeholder="Enter Solution Details"> </textarea>
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <label>Upload Photo</label>
+                    <input type="file" name="issue_img" value="" placeholder="Upload Photo">
                   </div>
 
                   <div class="form-group col-md-6">

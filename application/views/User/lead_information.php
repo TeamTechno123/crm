@@ -29,47 +29,58 @@
               <form class="m-0 input_form" id="form_action" role="form" action="" method="post">
                 <div class="card-body row">
 
-
-                  <div class="form-group col-md-12 select_sm">
-                    <label>Select Type Of Lead</label>
-                    <select class="form-control select2" name="lead_type" id="lead_type" data-placeholder="Select Type Of Lead" required>
-                      <option value="">Select Type Of Lead</option>
+                  <div class="form-group col-md-4">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" name="user_status" id="user_status" value="1">
+                          <label for="composition_scheme" class="custom-control-label">Existing Party</label>
+                        </div>
+                      </div>
+                  <div class="form-group col-md-8 select_sm">
+                    <label>Select Party Name</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select Party Name" required>
+                      <option value="">Select Party Name</option>
                       <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
                       <?php } } ?> -->
                     </select>
                   </div>
 
-                  <div class="form-group col-md-6">
-                    <label>Enter Lead No.</label>
-                    <input type="text" class="form-control form-control-sm" name="lead_no" id="lead_no" value="<?php if(isset($lead_no)){ echo $lead_no; } ?>" placeholder="Enter Lead No." required>
+                  <div class="form-group col-md-12">
+                    <label>Enter Name of Party</label>
+                    <input type="text" class="form-control required title-case text" name="user_name" id="user_name" value="<?php if(isset($user_name)){ echo $user_name; } ?>" placeholder="Enter Name of Party" required>
                   </div>
 
-                  <div class="form-group col-md-6">
-                    <label>Enter Lead Date</label>
-                    <input type="text" class="form-control form-control-sm" name="lead_date" id="lead_date" value="<?php if(isset($lead_date)){ echo $lead_date; } ?>" placeholder="Enter Lead Date" >
+                  <div class="form-group col-md-12">
+                    <label>Enter Address</label>
+                    <textarea class="form-control" name="solution" rows="3" cols="100" placeholder="Enter Address"> </textarea>
                   </div>
 
-
-                  <div class="form-group col-md-7 select_sm">
-                    <label>Select Party</label>
-                    <select class="form-control select2" name="employee_id" id="employee_id" data-placeholder="Select Party" required>
-                      <option value="">Select Party</option>
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select Country</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select Country" required>
+                      <option value="">Select Country</option>
                       <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
                       <?php } } ?> -->
                     </select>
-                  </div>
-
-                  <div class="form-group col-md-2  offset-md-2">
-                    <button id="btn_save" type="submit" class="btn btn-success mt-3">Add Party</button>
                   </div>
 
 
                   <div class="form-group col-md-4 select_sm">
-                    <label>Select Type Of Service / Product</label>
-                    <select class="form-control select2" name="project_status" id="project_status" data-placeholder="SelectType Of Service / Product" required>
-                      <option value="">Select Type Of Service / Product</option>
+                    <label>Select State</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select State" required>
+                      <option value="">Select State</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
+
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select City</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select City" required>
+                      <option value="">Select City</option>
                       <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
                       <?php } } ?> -->
@@ -78,25 +89,165 @@
 
 
 
-                <div class="form-group col-md-4">
-                    <label>Enter Quantity</label>
-                    <input type="text" class="form-control form-control-sm" name="quantity" id="quantity" value="<?php if(isset($quantity)){ echo $quantity; } ?>" placeholder="Enter Quantity" required>
+                  <div class="form-group col-md-6">
+                    <label>Mobile No. 1</label>
+                    <input type="number" class="form-control form-control-sm" name="user_mob1" id="user_mob1" value="<?php if(isset($user_mob1)){ echo $user_mob1; } ?>" placeholder="Mobile No. 1" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Mobile No. 2 </label>
+                    <input type="number" class="form-control form-control-sm" name="user_mob2" id="user_mob2" value="<?php if(isset($user_mob2)){ echo $user_mob2; } ?>" placeholder="Mobile No. 2">
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label>Email Id</label>
+                    <input type="email" class="form-control form-control-sm" name="company_email" id="company_email" value="<?php if(isset($company_email)){ echo $company_email; } ?>" placeholder="Email" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Contact Person Name</label>
+                    <input type="text" class="form-control form-control-sm" name="company_website" id="company_website" value="<?php if(isset($company_website)){ echo $company_website; } ?>" placeholder="Contact Person Name">
+                  </div>
+
+
+
+                  <div class="form-group col-md-6">
+                    <label>PAN No.</label>
+                    <input type="text" class="form-control form-control-sm" name="pan_no" id="pan_no" value="<?php if(isset($pan_no)){ echo $pan_no; } ?>" placeholder="PAN No." required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>GST No.</label>
+                    <input type="text" class="form-control form-control-sm" name="adhar_no" id="adhar_no" value="<?php if(isset($adhar_no)){ echo $adhar_no; } ?>" placeholder="GST No.">
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label>Date Of Birth</label>
+                    <input type="text" class="form-control form-control-sm" name="user_dob" id="user_dob" value="<?php if(isset($user_dob)){ echo $user_dob; } ?>" placeholder="Date Of Birth" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Anniversary On</label>
+                    <input type="text" class="form-control form-control-sm" name="anniversary_date" id="anniversary_date" value="<?php if(isset($anniversary_date)){ echo $anniversary_date; } ?>" placeholder="Anniversary On">
                   </div>
 
                   <div class="form-group col-md-4">
-                    <label>Enter Rate</label>
-                    <input type="text" class="form-control form-control-sm" name="rate" id="rate" value="<?php if(isset($rate)){ echo $rate; } ?>" placeholder="Enter Rate" required>
+                    <label>Bank Name</label>
+                    <input type="text" class="form-control form-control-sm" name="bank_name" id="bank_name" value="<?php if(isset($bank_name)){ echo $bank_name; } ?>" placeholder="Bank Name">
                   </div>
 
+                  <div class="form-group col-md-4">
+                    <label>Account No.</label>
+                    <input type="text" class="form-control form-control-sm" name="account_no" id="account_no" value="<?php if(isset($account_no)){ echo $account_no; } ?>" placeholder="Account No.">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>IFSC Code</label>
+                    <input type="text" class="form-control form-control-sm" name="ifsc_code" id="ifsc_code" value="<?php if(isset($ifsc_code)){ echo $ifsc_code; } ?>" placeholder="IFSC Code">
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label>Credit Limit On </label>
+                    <input type="text" class="form-control form-control-sm" name="bank_name" id="bank_name" value="<?php if(isset($bank_name)){ echo $bank_name; } ?>" placeholder="Credit Limit On ">
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label>Bill Limit On </label>
+                    <input type="text" class="form-control form-control-sm" name="account_no" id="account_no" value="<?php if(isset($account_no)){ echo $account_no; } ?>" placeholder="Bill Limit On ">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Payment Terms </label>
+                    <input type="text" class="form-control form-control-sm" name="ifsc_code" id="ifsc_code" value="<?php if(isset($ifsc_code)){ echo $ifsc_code; } ?>" placeholder="Payment Terms ">
+                  </div>
+
+
+                  <div class="form-group col-md-12 text-right">
+                    <button type="button" id="add_row" class="btn btn-sm btn-primary">Add Row</button>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <table id="myTable" class="table table-bordered tbl_list">
+                      <thead>
+                      <tr>
+                        <th>Select Product / Service</th>
+                        <th class="wt_150">Enter Qty</th>
+                        <th>Approx Value</th>
+                        <th class="wt_50"></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <select class="form-control form-control-sm" name="stock_type_id" id="stock_type_id" data-placeholder="Select Product / Service">
+                              <option value="">Select Product / Service</option>
+                              <option >1</option>
+                              <option >2</option>
+                              <option >3</option>
+                            </select>
+                          </td>
+                          <td class="wt_150">
+                            <input type="text" class="form-control form-control-sm" name="quantity" id="quantity" value="" placeholder="Enter Qty" required>
+                          </td>
+                          <td class="wt_150">
+                            <input type="text" class="form-control form-control-sm" name="s_date" id="s_date" value="" placeholder="Approx Value" required>
+                          </td>
+                          <td class="wt_50"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
 
                   <div class="form-group col-md-12">
-                    <label>Enter Details</label>
-                    <textarea class="form-control" name="project_description" rows="3" cols="100" placeholder="Enter Details"> </textarea>
+                    <label>Enter Additional Details</label>
+                    <textarea class="form-control" name="solution" rows="3" cols="100" placeholder="Enter Additional Details"> </textarea>
                   </div>
 
-                <div class="form-group col-md-6 select_sm">
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select Lead Source</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select Lead Source" required>
+                      <option value="">Select Lead Source</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
+
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select Sales Stage</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select Sales Stage" required>
+                      <option value="">Select Sales Stage</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
+
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select Probability</label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select Probability" required>
+                      <option value="">Select Probability</option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
+
+
+                  <div class="form-group col-md-4">
+                    <label>Expected Closed Date</label>
+                    <input type="text" class="form-control form-control-sm" name="lead_no" id="lead_no" value="<?php if(isset($lead_no)){ echo $lead_no; } ?>" placeholder="Expected Closed Date" required>
+                  </div>
+
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Select Lead Status </label>
+                    <select class="form-control select2" name="role_id" id="role_id" data-placeholder="Select Lead Status " required>
+                      <option value="">Select Lead Status </option>
+                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                      <?php } } ?> -->
+                    </select>
+                  </div>
+
+                  <div class="form-group col-md-4 select_sm">
                     <label>Assign To</label>
-                    <select class="form-control select2" name="assign_to" id="assign_to" data-placeholder="Assign To" required>
+                    <select class="form-control select2" name="lead_type" id="lead_type" data-placeholder="Assign To" required>
                       <option value="">Assign To</option>
                       <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
@@ -104,26 +255,23 @@
                     </select>
                   </div>
 
+                  <div class="form-group col-md-4">
+                    <label>Appointment Date</label>
+                    <input type="text" class="form-control form-control-sm" name="lead_no" id="lead_no" value="<?php if(isset($lead_no)){ echo $lead_no; } ?>" placeholder="Appointment Date" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Appointment Time</label>
+                    <input type="text" class="form-control form-control-sm" name="lead_no" id="lead_no" value="<?php if(isset($lead_no)){ echo $lead_no; } ?>" placeholder="Appointment Time" required>
+                  </div>
 
-
-                  <div class="form-group col-md-6 select_sm">
-                    <label>Select Status</label>
-                    <select class="form-control select2" name="source_name" id="source_name" data-placeholder="Select Status" required>
-                      <option value="">Select Status</option>
+                  <div class="form-group col-md-4 select_sm">
+                    <label>Remind Me After </label>
+                    <select class="form-control select2" name="lead_type" id="lead_type" data-placeholder="Remind Me After " required>
+                      <option value="">Remind Me After </option>
                       <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
                       <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
                       <?php } } ?> -->
                     </select>
-                  </div>
-
-                  <div class="form-group col-md-6">
-                    <label>Remind Me After Days</label>
-                    <input type="text" class="form-control form-control-sm" name="remind_days" id="remind_days" value="<?php if(isset($remind_days)){ echo $remind_days; } ?>" placeholder="Remind Me After Days" required>
-                  </div>
-
-                  <div class="form-group col-md-6">
-                    <label>Total Amount</label>
-                    <input type="text" class="form-control form-control-sm" name="total_amount" id="total_amount" value="<?php if(isset($total_amount)){ echo $total_amount; } ?>" placeholder="Total Amount" >
                   </div>
 
                 </div>
@@ -169,6 +317,43 @@
       }
     });
   });
+</script>
+
+<script type="text/javascript">
+  // Add Row...
+  <?php if(isset($update)){ ?>
+  var i = <?php echo $i-1; ?>
+  <?php } else { ?>
+  var i = 1;
+  <?php } ?>
+
+  $('#add_row').click(function(){
+    i++;
+    var row = ''+
+    '<tr>'+
+      '<td>'+
+        '<select class="form-control form-control-sm" name="stock_type_id" id="stock_type_id" data-placeholder="Select Product / Service">'+
+          '<option value="">Select Product / Service</option>'+
+          '<option >1</option>'+
+          '<option >2</option>'+
+          '<option >3</option>'+
+        '</select>'+
+      '</td>'+
+      '<td class="wt_150">'+
+        '<input type="text" class="form-control form-control-sm" name="quantity" id="quantity" value="" placeholder="Enter Qty" required>'+
+      '</td>'+
+      '<td class="wt_150">'+
+        '<input type="text" class="form-control form-control-sm" name="s_date" id="s_date" value="" placeholder="Approx Value" required>'+
+      '</td> '+
+      '<td class="wt_50"><a class="rem_row"><i class="fa fa-trash text-danger"></i></a></td>'+
+    '</tr>';
+    $('#myTable').append(row);
+  });
+
+  $('#myTable').on('click', '.rem_row', function () {
+    $(this).closest('tr').remove();
+  });
+
 </script>
 </body>
 </html>

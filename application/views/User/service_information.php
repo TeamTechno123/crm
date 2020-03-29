@@ -30,12 +30,11 @@
                 <div class="card-body row">
 
                   <div class="form-group col-md-12 select_sm">
-                    <label>Select Type Of Service / Product Type</label>
-                    <select class="form-control select2" name="task_type" id="task_type" data-placeholder="Select Type Of Service / Product Type" required>
-                      <option value="">Select Service Type</option>
-                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
-                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
-                      <?php } } ?> -->
+                    <label>Select Type</label>
+                    <select class="form-control select2" name="service_type" id="service_type" data-placeholder="Select Type" required>
+                      <option value="">Select Type</option>
+                      <option value="service">Service</option>
+                      <option value="product">Product</option>
                     </select>
                   </div>
                   <div class="form-group col-md-12">
@@ -43,9 +42,9 @@
                     <input type="text" class="form-control form-control-sm" name="service_name" id="service_name" value="<?php if(isset($service_name)){ echo $service_name; } ?>" placeholder="Enter Service / Product Name" required>
                   </div>
 
-                  <div class="form-group col-md-12">
-                    <label>Enter Description</label>
-                    <textarea class="form-control" name="service_description" rows="3" cols="100" placeholder="Enter Description"> </textarea>
+                  <div class="form-group col-md-6">
+                    <label>Enter Short Name</label>
+                    <input type="text" class="form-control form-control-sm" name="hsn_code" id="hsn_code" value="<?php if(isset($hsn_code)){ echo $hsn_code; } ?>" placeholder="Enter Short Name" required>
                   </div>
 
                   <div class="form-group col-md-6">
@@ -75,15 +74,7 @@
                     </select>
                   </div>
 
-                  <div class="form-group col-md-6 select_sm">
-                    <label>Renewal After</label>
-                    <select class="form-control select2" name="renewal_after" id="renewal_after" data-placeholder="Renewal After" required>
-                      <option value="">Renewal After</option>
-                      <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
-                      <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
-                      <?php } } ?> -->
-                    </select>
-                  </div>
+
 
                   <div class="form-group col-md-6">
                     <label>MRP</label>
@@ -119,6 +110,37 @@
                         <label>Opening Stock</label>
                         <input type="text" class="form-control form-control-sm" name="opening_stock" id="opening_stock" value="<?php if(isset($opening_stock)){ echo $opening_stock; } ?>" placeholder="Opening Stock" required>
                       </div>
+
+                      <div class="form-group col-md-6">
+                        <label>Opening Stock Valuation</label>
+                        <input type="text" class="form-control form-control-sm" name="opening_stock" id="opening_stock" value="<?php if(isset($opening_stock)){ echo $opening_stock; } ?>" placeholder="Opening Stock Valuation" required>
+                      </div>
+
+                      <div class="form-group col-md-6 select_sm">
+                        <label>Service Alert Every </label>
+                        <select class="form-control select2" name="unit_id" id="unit_id" data-placeholder="Service Alert Every " required>
+                          <option value="">Service Alert Every </option>
+                          <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                          <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                          <?php } } ?> -->
+                        </select>
+                      </div>
+
+                      <div class="form-group col-md-6 select_sm">
+                        <label>Renewal Period </label>
+                        <select class="form-control select2" name="unit_id" id="unit_id" data-placeholder="Renewal Period " required>
+                          <option value="">Renewal Period </option>
+                          <!-- <?php if(isset($item_group_list)){ foreach ($item_group_list as $list) { ?>
+                          <option value="<?php echo $list->item_group_id; ?>" <?php if(isset($item_group_id) && $item_group_id == $list->item_group_id){ echo 'selected'; } ?>><?php echo $list->item_group_name; ?></option>
+                          <?php } } ?> -->
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                            <div class="custom-control custom-checkbox">
+                              <input class="custom-control-input" type="checkbox" name="composition_scheme" id="composition_scheme" value="1">
+                              <label for="composition_scheme" class="custom-control-label">Disable This </label>
+                            </div>
+                          </div>
                 </div>
                 <div class="card-footer row">
 
